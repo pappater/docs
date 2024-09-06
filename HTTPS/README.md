@@ -1,10 +1,10 @@
-# What is HTTPS? (https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/)
-
 ## Link to refer
 
 1.  https://howhttps.works/
 2.  https://www.youtube.com/watch?v=hExRDVZHhig
 3.  https://www.youtube.com/watch?v=GoXgl9r0Kjk
+
+## What is HTTPS? (https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/)
 
 Hypertext Transfer Protocol Secure (HTTPS) is the secure version of HTTP, which is the primary protocol used to send data between a web browser and a website. HTTPS is encrypted to increase the security of data transfer, which is particularly important when transmitting sensitive data, such as logging into a bank account, email service, or health insurance provider.
 
