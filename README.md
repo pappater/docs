@@ -1,9 +1,3 @@
 # Some introduction 
 
 Hello everyone, I’m Pratheesh. I have 8 years of experience in IT, with 5 years focusing on React.js and other frontend technologies. Previously, I worked at Infosys, and today I'm excited to join TCS. My skill set includes React, JavaScript, and various frontend frameworks, and I enjoy working on projects that involve creating smooth and user-friendly interfaces. Outside of work, I enjoy reading, traveling, and bike riding. I'm looking forward to collaborating with all of you and contributing to the team.
-
-
-Hi everyone, I’m Pratheesh. I bring 8 years of experience in the IT industry, with a strong focus on frontend development, particularly React.js, which I've been working with for the past 5 years. I’ve just transitioned from Infosys and am excited to start this new chapter at TCS. My expertise lies in building interactive and efficient web applications using modern frontend technologies like JavaScript and React. In my free time, I enjoy reading, traveling, and going on bike rides. I’m eager to get to know the team and contribute to our upcoming projects.
-
-
-Hi everyone, I’m Pratheesh. I have 8 years of experience in the IT industry, specializing in frontend development. For the past 5 years, I’ve primarily worked with React.js, along with technologies like JavaScript, TypeScript, HTML5, and CSS3. I also have experience in responsive design, RESTful APIs, and state management libraries like Redux. I’ve recently transitioned from Infosys and am thrilled to join TCS. I’m passionate about creating efficient, scalable, and user-friendly web applications, and I enjoy staying updated with the latest trends and best practices in web development. In my spare time, I love reading, traveling, and bike riding. I’m really looking forward to collaborating with all of you and making valuable contributions to the team.
