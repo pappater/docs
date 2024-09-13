@@ -1,11 +1,7 @@
-Here’s an improved version of your `README.md` file with a better introduction and a more polished look for the list.
-
 ---
-
 # Frontend Documentation Notes
 
 This repository is a collection of notes I've compiled while exploring various frontend concepts, tools, and technologies. Each link leads to detailed documentation on the respective topic, offering insights and resources that I’ve gathered during my research. It serves as a personal reference for concepts I find important or interesting during my learning journey. Feel free to explore!
-
 ---
 
 ## Topics Covered
@@ -50,4 +46,6 @@ Understand the critical aspects of web security and how CSP can help mitigate at
 
 Master the process of bundling and optimizing your assets with Webpack, a powerful module bundler.
 
----
+### [GitHub Pages and Jekyll](GitHub Pages and Jekyll/README.md)
+
+A comprehensive guide to setting up and deploying static websites using GitHub Pages and Jekyll.
