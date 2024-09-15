@@ -1,6 +1,6 @@
 # Frontend Documentation Notes
 
-This repository is a collection of notes I've compiled while exploring various frontend concepts, tools, and technologies. Each link leads to detailed documentation on the respective topic, offering insights and resources that I’ve gathered during my research. It serves as a personal reference for concepts I find important or interesting during my learning journey. Feel free to explore!
+This repository is a collection of notes I've compiled while exploring various frontend concepts, tools, and technologies. Each link leads to detailed documentation on the respective topic, offering insights and resources that I’ve gathered during my research. It serves as a personal reference for concepts I find important or interesting during my learning journey.
 
 ## Topics Covered
 
