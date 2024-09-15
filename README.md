@@ -47,3 +47,7 @@ Master the process of bundling and optimizing your assets with Webpack, a powerf
 ### [GitHub Pages and Jekyll](GitHub Pages and Jekyll/README.md)
 
 A comprehensive guide to setting up and deploying static websites using GitHub Pages and Jekyll.
+
+### [Cheerio and Puppeteer](Cheerio and Puppeteer/README.md)
+
+Comprehensive Guide to Cheerio and Puppeteer
