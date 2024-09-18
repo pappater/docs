@@ -52,8 +52,8 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [Nextjs]
 
-    ### [Part1](Nextjs/Intro and routing/README.md)
+### [Nextjs - Part1](Nextjs/Intro and routing/README.md)
 
-    ### [Part2](Nextjs/Layout/README.md)
+### [Nextjs - Part2](Nextjs/Layout/README.md)
 
 <!-- Comprehensive Guide to Cheerio and Puppeteer -->
