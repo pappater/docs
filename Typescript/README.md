@@ -546,3 +546,250 @@ If the object or class has all the required properties, TypeScript will say they
 ```
 
 ```
+
+# TypeScript Handbook Notes
+
+## The Basics
+
+JavaScript is dynamically typed, meaning the behavior of values is only known at runtime. Every value in JavaScript has a set of behaviors that can be observed through various operations.
+
+```ts
+const message = "Hello World!";
+
+// Accessing the 'toLowerCase' property and calling it
+message.toLowerCase(); // Output: "hello world"
+
+// Trying to call the variable directly
+message(); // TypeError: message is not a function
+```
+
+### Key Concepts:
+
+- **Dynamic Typing**: In JavaScript, the type of a variable is determined at runtime.
+- **Operations on Types**: Not all operations are valid on every type, as seen when trying to call `message()` directly.
+- **TypeError**: The runtime error occurs because a string is not callable.
+
+---
+
+## Static Type-Checking
+
+TypeScript introduces **static typing**, which allows developers to know potential errors **before** the code is run. This helps avoid bugs and improve code predictability.
+
+```ts
+const message = "hello!";
+message();
+// Error: Type 'String' has no call signatures.
+```
+
+### Key Concepts:
+
+- **Static Type-Checking**: TypeScript can infer the types of values before runtime.
+- **Type-Checking Tools**: TypeScript catches errors like trying to call a non-function value (`message` in this case).
+
+---
+
+## Non-Exception Failures
+
+JavaScript does not throw exceptions for every possible mistake. For instance, accessing a property that doesn't exist returns `undefined` instead of throwing an error.
+
+```ts
+const user = { name: "Daniel", age: 26 };
+console.log(user.location); // undefined
+```
+
+However, in TypeScript, this is flagged as a potential bug:
+
+```ts
+const user = { name: "Daniel", age: 26 };
+console.log(user.location);
+// Error: Property 'location' does not exist on type '{ name: string; age: number; }'
+```
+
+### Key Concepts:
+
+- **Static vs. Dynamic Behavior**: TypeScript catches issues with missing properties that JavaScript would otherwise ignore.
+- **Tooling for Bugs**: Helps prevent typos or accessing undefined properties.
+
+---
+
+## Examples of Common Bugs Caught by TypeScript
+
+### 1. **Typos**
+
+JavaScript would let this pass, but it would not work as intended:
+
+```ts
+const announcement = "Hello World!";
+announcement.toLocalLowerCase(); // Error: Property 'toLocalLowerCase' does not exist on type 'string'.
+```
+
+What you likely meant was:
+
+```ts
+announcement.toLocaleLowerCase();
+```
+
+### 2. **Uncalled Functions**
+
+JavaScript wouldn’t flag this as a problem at compile time, but TypeScript will:
+
+```ts
+function flipCoin() {
+  return Math.random < 0.5; // Error: Operator '<' cannot be applied to '() => number' and 'number'.
+}
+```
+
+The correct function would be:
+
+```ts
+function flipCoin() {
+  return Math.random() < 0.5;
+}
+```
+
+### 3. **Logic Errors**
+
+Errors in basic logic can also be caught:
+
+```ts
+const value = Math.random() < 0.5 ? "a" : "b";
+if (value !== "a") {
+  // ...
+} else if (value === "b") {
+  // Error: This comparison appears to be unintentional because the types 'a' and 'b' have no overlap.
+}
+```
+
+---
+
+## Types for Tooling
+
+TypeScript isn’t just about catching errors—it also provides **tooling support** for code completions and auto-suggestions.
+
+```ts
+import express from "express";
+const app = express();
+
+app.get("/", function (req, res) {
+  res.send; // Auto-suggestions: send, sendDate, sendFile, etc.
+});
+
+app.listen(3000);
+```
+
+### Key Concepts:
+
+- **Code Completion**: TypeScript helps with auto-completions in your editor, improving productivity.
+- **Error Detection**: Errors are flagged as you write, before running the code.
+
+---
+
+## TypeScript Compiler (`tsc`)
+
+TypeScript’s compiler (`tsc`) compiles `.ts` files into JavaScript. For example, writing a simple "Hello World" program in TypeScript looks identical to JavaScript:
+
+```ts
+// hello.ts
+console.log("Hello world!");
+```
+
+Compile the file:
+
+```bash
+tsc hello.ts
+```
+
+This produces a `hello.js` file:
+
+```js
+// hello.js
+console.log("Hello world!");
+```
+
+### Handling Type Errors:
+
+Introducing a type-checking error would look like this:
+
+```ts
+function greet(person: string, date: Date) {
+  console.log(`Hello ${person}, today is ${date.toDateString()}!`);
+}
+
+greet("Brendan");
+// Error: Expected 2 arguments, but got 1.
+```
+
+TypeScript catches the error and prevents the JavaScript from being generated if you use strict settings (`--noEmitOnError`).
+
+---
+
+## Explicit Types
+
+TypeScript allows us to explicitly define types. For example:
+
+```ts
+function greet(person: string, date: Date) {
+  console.log(`Hello ${person}, today is ${date.toDateString()}!`);
+}
+
+greet("Maddison", new Date()); // Correct usage
+```
+
+### Type Inference
+
+In many cases, TypeScript can infer the type, so we don’t always need to annotate variables:
+
+```ts
+let msg = "hello there!"; // TypeScript infers msg as a 'string'
+```
+
+---
+
+## Downleveling
+
+TypeScript can transform code that uses modern ECMAScript (ES6 or above) features into older versions for better browser compatibility. For instance, **template strings** are rewritten:
+
+```ts
+`Hello ${person}, today is ${date.toDateString()}!`;
+// becomes
+"Hello ".concat(person, ", today is ").concat(date.toDateString(), "!");
+```
+
+This is called **downleveling**.
+
+### Targeting Different ECMAScript Versions
+
+You can specify which version of ECMAScript TypeScript should target:
+
+```bash
+tsc --target es2015 hello.ts
+```
+
+This outputs code targeting ECMAScript 2015 (ES6).
+
+---
+
+## Strictness in TypeScript
+
+TypeScript offers various levels of strictness for type-checking. By default, TypeScript tries not to get in the way, but you can enable stricter settings for catching more bugs. The two most important flags are:
+
+### 1. **noImplicitAny**
+
+This flag ensures that no variable has an implicit `any` type, forcing the developer to specify a type.
+
+```ts
+function greet(person) {
+  // Error: Parameter 'person' implicitly has an 'any' type.
+}
+```
+
+### 2. **strictNullChecks**
+
+By default, `null` and `undefined` are assignable to any type. This can lead to many bugs, but enabling `strictNullChecks` helps prevent this by enforcing explicit handling of `null` and `undefined`.
+
+```ts
+let name: string = null;
+// Error: Type 'null' is not assignable to type 'string'.
+```
+
+---
