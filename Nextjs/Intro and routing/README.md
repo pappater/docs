@@ -1085,4 +1085,4 @@ Here, all routes under the **`(dashboard)`** group will use the same **`layout.t
 
 Both of these features help in maintaining large-scale Next.js applications by keeping the folder structure organized while ensuring clean, user-friendly URLs.
 
-Let me know if you need further details or more examples!
+[Part 2](Layout/README.md)
