@@ -50,13 +50,13 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [Cheerio and Puppeteer](Cheerio and Puppeteer/README.md)
 
-### [Nextjs]
+## Nextjs
 
 ### [Nextjs - Part1](Nextjs/Intro and routing/README.md)
 
 ### [Nextjs - Part2](Nextjs/Layout/README.md)
 
-### [React js]
+## React js
 
 ### [React js interview question](./Interview%20Preparation/Reactjs/)
 
@@ -66,7 +66,7 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [React js ref from doc - Part 3](./Interview%20Preparation/Reactjs-3/)
 
-### [Javascript]
+## Javascript
 
 ### [Javascript - Part 1](./Interview%20Preparation/Javascript/)
 
