@@ -66,4 +66,10 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [React js ref from doc - Part 3](./Interview%20Preparation/Reactjs-3/)
 
+### [Javascript]
+
+### [Javascript - Part 1](./Interview%20Preparation/Javascript/)
+
+### [Javascript - Part 2](./Interview%20Preparation/Javascript-1/)
+
 <!-- Comprehensive Guide to Cheerio and Puppeteer -->
