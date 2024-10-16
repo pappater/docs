@@ -72,4 +72,8 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [Javascript - Part 2](./Interview%20Preparation/Javascript-1/)
 
+### [Javascript - Part 3](./Interview%20Preparation/Javascript-2/)
+
+### [Javascript - Part 4](./Interview%20Preparation/Javascript-3/)
+
 <!-- Comprehensive Guide to Cheerio and Puppeteer -->
