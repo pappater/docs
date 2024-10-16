@@ -58,7 +58,7 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ## React js
 
-### [React js interview question](./Interview%20Preparation/Reactjs/)
+### [React js interview questions](./Interview%20Preparation/Reactjs/)
 
 ### [React js ref from doc - Part 1](./Interview%20Preparation/Reactjs-1/)
 
@@ -67,6 +67,8 @@ This repository is a collection of notes I've compiled while exploring various f
 ### [React js ref from doc - Part 3](./Interview%20Preparation/Reactjs-3/)
 
 ## Javascript
+
+### [Javascript interview qustions](./Interview%20Preparation/Javascript-qa/)
 
 ### [Javascript - Part 1](./Interview%20Preparation/Javascript/)
 
