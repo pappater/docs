@@ -135,3 +135,97 @@ The Shared Responsibility Model provides a strong security foundation for cloud 
 
 This summary highlights core concepts and responsibilities to help ensure your notes reflect the security expectations in cloud computing.
 ![3-shared-responsibility-model](../../Assets/SC-900/3-shared-responsibility-model.png)
+[Official docs](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/2-describe-shared-responsibility-model)
+
+## Defense in Depth: Comprehensive Cloud Security Approach
+
+**Defense in Depth** is a cybersecurity strategy that layers multiple security measures to protect data, applications, and infrastructure. The idea is to build multiple security layers so that if one defense fails, others remain active, creating a comprehensive and resilient security posture. It’s based on the concept of redundancy in security: using varied, overlapping defenses minimizes risks and provides depth to security, preventing breaches even if an attacker penetrates one layer.
+
+---
+
+### Core Layers of Defense in Depth
+
+Microsoft outlines **seven key layers** in defense in depth, each addressing a specific part of a system to enhance security:
+
+1. **Physical Security**
+
+   - **Objective**: Protects data centers and physical infrastructure against unauthorized physical access.
+   - **Measures**: Surveillance, access controls, security guards, and environmental systems (fire suppression, cooling).
+   - **Example**: Microsoft Azure data centers use biometric scanning, 24/7 surveillance, and limited access to authorized personnel only, ensuring unauthorized individuals cannot physically access servers or storage.
+
+2. **Identity and Access Control**
+
+   - **Objective**: Ensures that only authorized users access systems and data, guarding against unauthorized access and insider threats.
+   - **Measures**: Strong authentication (multi-factor authentication), role-based access control (RBAC), conditional access policies.
+   - **Example**: Using Azure Active Directory (AAD), a company enforces multi-factor authentication (MFA) for all employees. Employees accessing sensitive data must verify their identity with an MFA code in addition to their password.
+
+3. **Perimeter Security**
+
+   - **Objective**: Creates a security boundary to prevent unauthorized network access, keeping potential attackers out.
+   - **Measures**: Firewalls, Distributed Denial of Service (DDoS) protection, virtual private networks (VPNs).
+   - **Example**: Microsoft Azure provides DDoS protection to detect and block malicious traffic before it can reach a company's resources. This perimeter protection prevents DDoS attacks that could disrupt services.
+
+4. **Network Security**
+
+   - **Objective**: Protects network communication within the cloud environment to prevent internal threats and contain potential breaches.
+   - **Measures**: Network segmentation, virtual network firewalls, network security groups (NSGs).
+   - **Example**: A company segments its network into zones based on sensitivity. For instance, database servers reside on one virtual network (VNet) and are only accessible by specific application servers, reducing the chance of lateral movement by attackers.
+
+5. **Compute Security**
+
+   - **Objective**: Secures VMs, containers, and compute resources by ensuring these environments are regularly patched, configured securely, and monitored.
+   - **Measures**: Anti-malware, endpoint protection, vulnerability assessments, and system hardening.
+   - **Example**: Azure Security Center can run vulnerability scans on VMs, providing a list of recommended security updates and helping the company quickly patch vulnerabilities to maintain secure compute environments.
+
+6. **Application Security**
+
+   - **Objective**: Protects applications from vulnerabilities and ensures they are securely coded and managed.
+   - **Measures**: Secure application development practices, code analysis, runtime application self-protection (RASP), web application firewalls (WAF).
+   - **Example**: A development team uses Azure Application Gateway’s Web Application Firewall to protect an e-commerce website against common attacks like SQL injection and cross-site scripting, blocking malicious requests at the application level.
+
+7. **Data Security**
+   - **Objective**: Ensures that data is securely stored, accessed, and managed.
+   - **Measures**: Data encryption (at rest and in transit), data masking, access controls, and data loss prevention (DLP).
+   - **Example**: A healthcare company stores patient data in Azure SQL Database, with encryption enabled for data at rest and in transit. Role-based access ensures only medical staff can view patient information, adding extra data security measures to comply with healthcare regulations.
+
+---
+
+### Benefits of Defense in Depth
+
+1. **Comprehensive Security Coverage**: Protects every part of the cloud environment, from physical security at data centers to data encryption.
+2. **Redundant Protections**: If one layer is breached, others remain active, minimizing overall risk.
+3. **Tailored Security**: Allows organizations to apply relevant protections based on their unique needs and regulatory requirements.
+
+---
+
+### Example of Defense in Depth in Practice
+
+Imagine a company storing confidential data on Azure. Here’s how Defense in Depth would work:
+
+- **Physical Security**: Azure’s data center enforces biometric security, ensuring only specific personnel access server rooms.
+- **Identity and Access**: Employees use multi-factor authentication and are assigned roles in Azure Active Directory, restricting access based on job responsibilities.
+- **Perimeter Security**: Azure’s DDoS protection blocks unusual traffic patterns, preventing external DDoS attacks.
+- **Network Security**: Network security groups limit access, only allowing essential communication between application and database servers.
+- **Compute Security**: Azure Security Center regularly scans the company’s VMs, notifying IT of any necessary patches.
+- **Application Security**: The application development team uses secure coding practices, preventing vulnerabilities like SQL injections.
+- **Data Security**: Data at rest in Azure Storage is encrypted, and data in transit is protected with SSL/TLS, ensuring no unauthorized access.
+
+Each layer adds redundancy, making it harder for potential attackers to breach the system, enhancing overall security.
+
+### Confidentiality, Integrity, Availability (CIA)
+
+As described above, a defense in-depth strategy uses a series of mechanisms to slow the advance of an attack. All the different mechanisms (technologies, processes, and training) are elements of a cybersecurity strategy, whose goals include ensuring confidentiality, integrity, and availability; often referred to as CIA.
+
+![Diagram showing the Confidentiality, Integrity, Availability (CIA) triangle.](../../Assets/SC-900/4-confidentiality-integrity-availability.png)
+
+**Confidentiality** refers to the need to keep confidential sensitive data such as customer information, passwords, or financial data. You can encrypt data to keep it confidential, but then you also need to keep the encryption keys confidential. Confidentiality is the most visible part of security; we can clearly see need for sensitive data, keys, passwords, and other secrets to be kept confidential.
+
+**Integrity** refers to keeping data or messages correct. When you send an email message, you want to be sure that the message received is the same as the message you sent. When you store data in a database, you want to be sure that the data you retrieve is the same as the data you stored. Encrypting data keeps it confidential, but you must then be able to decrypt it so that it's the same as before it was encrypted. Integrity is about having confidence that data hasn't been tampered with or altered.
+
+**Availability** refers to making data available to those who need it, when they need it. It's important to the organization to keep customer data secure, but at the same time it must also be available to employees who deal with customers. While it might be more secure to store the data in an encrypted format, employees need access to decrypted data.
+
+While the goals of a cybersecurity strategy are to preserve the confidentiality, integrity, and availability of systems, networks, applications, and data; it's the goal of cybercriminals to disrupt these goals. Microsoft’s portfolio includes the solutions and technologies to enable organizations to deliver on the goals of the CIA triad.
+
+### Learn More
+
+For further details, visit the official Microsoft documentation on Defense in Depth: [Defense in Depth | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth).
