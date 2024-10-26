@@ -78,4 +78,8 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [Javascript - Part 4](./Interview%20Preparation/Javascript-3/)
 
+## SC-900
+
+### [Describe the concepts of security, compliance, and identity](./SC-900/Part-1/)
+
 <!-- Comprehensive Guide to Cheerio and Puppeteer -->
