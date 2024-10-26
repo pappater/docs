@@ -66,7 +66,7 @@ This repository is a collection of notes I've compiled while exploring various f
 
 ### [React js ref from doc - Part 3](./Interview%20Preparation/Reactjs-3/)
 
-## Javascript
+## Javascript [Need to add https://developer.mozilla.org/en-US/docs/Learn/JavaScript ]
 
 ### [Javascript interview qustions](./Interview%20Preparation/Javascript-qa/)
 

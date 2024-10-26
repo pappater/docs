@@ -1360,12 +1360,6 @@ function App() {
 
 In this example, the modal content is rendered into a DOM node (`modal-root`) outside the main application DOM hierarchy.
 
----
-
-Here are **11-20 intermediate React concepts** with official documentation definitions, explanations, examples, and use cases.
-
----
-
 ### 11. **What is Error Boundary in React?**
 
 **Official Definition (React Docs):**  
