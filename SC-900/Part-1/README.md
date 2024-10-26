@@ -228,7 +228,7 @@ While the goals of a cybersecurity strategy are to preserve the confidentiality,
 
 ### Learn More
 
-For further details, visit the official Microsoft documentation on Defense in Depth: [Defense in Depth | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth).
+[Defense in Depth | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth).
 
 ## Zero Trust Model: A Modern Security Framework
 
@@ -332,6 +332,6 @@ By implementing Zero Trust, the company improves its defenses, ensuring secure a
 
 ### Learn More
 
-For further details, visit the official Microsoft documentation on Zero Trust: [Zero Trust Model | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/4-describe-zero-trust-model).
+[Zero Trust Model | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/4-describe-zero-trust-model).
 
 ![Zero Trust Pillars](../../Assets/SC-900/2-zero-trust-pillars-v2.png)
