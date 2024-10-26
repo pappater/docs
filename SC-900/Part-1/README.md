@@ -229,3 +229,109 @@ While the goals of a cybersecurity strategy are to preserve the confidentiality,
 ### Learn More
 
 For further details, visit the official Microsoft documentation on Defense in Depth: [Defense in Depth | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth).
+
+## Zero Trust Model: A Modern Security Framework
+
+The **Zero Trust Model** is a security framework that assumes no user, device, or system—whether inside or outside an organization's network—can automatically be trusted. Unlike traditional network security approaches that trust devices within a network perimeter, Zero Trust continuously verifies every access request, securing resources more effectively against modern threats.
+
+Zero Trust operates on three guiding principles:
+
+1. **Verify Explicitly**
+2. **Use Least Privilege Access**
+3. **Assume Breach**
+
+---
+
+### Key Principles of Zero Trust
+
+1. **Verify Explicitly**
+
+   - **Concept**: Always authenticate and authorize based on all available data points, such as user identity, device, location, and request context. Authentication isn’t a one-time check; it is ongoing and happens every time a resource is accessed.
+   - **Measures**:
+     - Multi-Factor Authentication (MFA)
+     - Conditional Access Policies based on location, device, or risk level
+     - Continuous monitoring and verification
+   - **Example**: Suppose an employee, Sam, wants to access a file on a company network. Zero Trust will require Sam to verify his identity (e.g., through MFA) and may require additional authentication if Sam’s request comes from an unfamiliar location or device. Even if Sam has accessed the file before, the system will re-authenticate at regular intervals to ensure ongoing security.
+
+2. **Use Least Privilege Access**
+
+   - **Concept**: Limit access rights to only what is necessary for users to perform their tasks, reducing potential attack vectors. Users are only granted access to resources essential for their role, not more.
+   - **Measures**:
+     - Role-Based Access Control (RBAC)
+     - Just-In-Time (JIT) access to temporarily grant permissions when needed
+     - Policy-based access restrictions
+   - **Example**: A developer working on a company’s website needs access to web server resources but does not need access to the financial records database. With least privilege, the developer is only given permissions for server access, minimizing exposure in case of a breach. Access to additional resources can be granted only when required and revoked immediately after.
+
+3. **Assume Breach**
+   - **Concept**: Operate under the assumption that the network may already be compromised. Constant monitoring, containment, and alerts are crucial. The focus is on minimizing damage and quickly containing potential threats.
+   - **Measures**:
+     - Network Segmentation and Micro-Segmentation
+     - Advanced threat detection and response (e.g., Azure Security Center)
+     - Logging and analytics for visibility
+   - **Example**: In a Zero Trust environment, each department’s resources are isolated. If a threat actor gains access to one segment (like HR), they cannot easily access another (like Finance). Advanced threat monitoring tools alert IT teams in real time, and response protocols are in place to isolate compromised segments immediately.
+
+---
+
+### Core Components of Zero Trust Architecture
+
+1. **Identity Verification**
+
+   - **Purpose**: Enforces strict identity checks for each user or device before access is granted.
+   - **Technologies**: Multi-Factor Authentication (MFA), Single Sign-On (SSO), Conditional Access.
+   - **Example**: Employees at a company are required to log in with their credentials and use MFA (like a mobile app code) to verify their identity. SSO allows secure and seamless access to multiple applications once identity is confirmed.
+
+2. **Device Health and Compliance**
+
+   - **Purpose**: Ensures that devices meet security standards and are free from vulnerabilities before granting access.
+   - **Technologies**: Endpoint management tools (like Microsoft Endpoint Manager), mobile device management (MDM), and device compliance policies.
+   - **Example**: If Sam’s laptop doesn’t have the latest security patches or antivirus protection, he may be denied access or granted limited access until the device is compliant.
+
+3. **Network Segmentation and Micro-Segmentation**
+
+   - **Purpose**: Isolates resources within the network, ensuring each segment is secured separately to prevent lateral movement by attackers.
+   - **Technologies**: Virtual Networks (VNets), network security groups (NSGs), software-defined perimeters (SDP).
+   - **Example**: Within a company’s network, finance applications are isolated from customer data. Each department operates in its own segment with specific access permissions. Even if an attacker breaches one area, strict segmentation prevents them from moving freely.
+
+4. **Application Security**
+
+   - **Purpose**: Protects applications and limits access based on context and user behavior.
+   - **Technologies**: Application gateways, secure coding practices, real-time application behavior monitoring.
+   - **Example**: A company uses Azure App Service to deploy an application with strict access controls, allowing only authenticated employees to access it. If the application detects unusual behavior, it may prompt re-authentication or lock out users temporarily.
+
+5. **Data Protection**
+
+   - **Purpose**: Enforces encryption, access management, and monitoring to secure sensitive data at all times.
+   - **Technologies**: Data encryption (at rest and in transit), data loss prevention (DLP) policies, access controls.
+   - **Example**: All customer data stored in Azure SQL Database is encrypted. Data loss prevention rules flag any attempt to download sensitive data outside the organization.
+
+6. **Threat Detection and Response**
+   - **Purpose**: Constantly monitors and analyzes network activity to detect potential threats and respond in real-time.
+   - **Technologies**: Security Information and Event Management (SIEM) systems, threat detection tools, behavior analytics.
+   - **Example**: Azure Sentinel (Microsoft’s SIEM) detects unusual activity on the network, like multiple failed login attempts, and triggers an automated response to lock the account and alert the IT team.
+
+---
+
+### Benefits of the Zero Trust Model
+
+1. **Enhanced Security**: Continuous verification and least privilege access significantly reduce security risks.
+2. **Adaptability**: Effective against modern security challenges, especially with increased remote work and BYOD (Bring Your Own Device) policies.
+3. **Containment**: If a breach occurs, Zero Trust limits lateral movement, reducing potential damage.
+4. **Regulatory Compliance**: Helps meet compliance standards by enforcing strict access, monitoring, and data protection measures.
+
+---
+
+### Example of Zero Trust in Practice
+
+Imagine a global company adopting the Zero Trust model for its remote workforce:
+
+- **Verify Explicitly**: Each employee must verify their identity through MFA and re-authenticate periodically when accessing sensitive resources.
+- **Use Least Privilege Access**: Employees are only given access to the resources they need for their roles. Temporary access is granted as needed and removed once tasks are complete.
+- **Assume Breach**: Network segmentation isolates each department, so if the marketing network is compromised, it doesn’t impact finance. Real-time threat detection monitors unusual activity and responds immediately.
+
+By implementing Zero Trust, the company improves its defenses, ensuring secure access for remote workers and minimizing risks from unauthorized access or potential breaches.
+
+### Learn More
+
+For further details, visit the official Microsoft documentation on Zero Trust: [Zero Trust Model | Microsoft](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/4-describe-zero-trust-model).
+
+![Zero Trust Pillars](../../Assets/SC-900/2-zero-trust-pillars-v2.png)
